@@ -1,4 +1,4 @@
-package com.dacruz.starwarschallenge.ui.theme
+package com.dacruz.theme
 
 import androidx.compose.ui.graphics.Color
 
