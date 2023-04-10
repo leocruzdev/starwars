@@ -19,6 +19,7 @@ fun AppNavigator() {
     when (currentScreen) {
         is Screen.SplashScreen -> SplashScreen()
         is Screen.HomeScreen -> HomeScreen()
+        is Screen.CharacterScreen -> TODO()
     }
 }
 
