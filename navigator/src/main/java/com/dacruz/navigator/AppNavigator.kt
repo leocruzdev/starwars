@@ -5,11 +5,11 @@ import kotlinx.coroutines.flow.StateFlow
 import java.util.LinkedList
 
 class AppNavigator : NavigationHandler {
-    private val _currentScreen = MutableStateFlow<Screen>(Screen.SplashScreen)
+    private val _currentScreen = MutableStateFlow<Screen>(Screen.HomeScreen)
     override val currentScreen: StateFlow<Screen> = _currentScreen
 
     private val screenHistory = LinkedList<Screen>().apply {
-        push(Screen.SplashScreen)
+        push(Screen.HomeScreen)
     }
 
     override fun navigateTo(screen: Screen) {
