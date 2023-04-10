@@ -1,6 +1,7 @@
 package com.dacruz.starwarschallenge
 
 import android.app.Application
+import com.dacruz.home.di.homeModule
 import com.dacruz.navigator.di.navigationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -13,7 +14,7 @@ class StarWarsApp : Application() {
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(this@StarWarsApp)
-            modules(listOf(navigationModule))
+            modules(listOf(navigationModule, homeModule))
         }
     }
 }

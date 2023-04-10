@@ -5,7 +5,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import com.dacruz.home.HomeScreen
+import com.dacruz.home.presentation.HomeScreen
 import com.dacruz.navigator.NavigationHandler
 import com.dacruz.navigator.Screen
 import org.koin.compose.koinInject
