@@ -1,12 +1,16 @@
 package com.dacruz.networking
 
-class NetworkRequestManager(private val transformer: ExceptionTransformer) {
+import com.dacruz.networking.errors.ConnectionTimeoutTransformer
 
-    suspend fun <T> executeRequest(request: suspend () -> T): T {
-        return try {
-            request()
-        } catch (incoming: Throwable) {
-            throw transformer.transform(incoming)
-        }
+
+val transformer: ExceptionTransformer = ConnectionTimeoutTransformer()
+
+suspend fun <T> executeRequest(
+    request: suspend () -> T
+): T {
+    return try {
+        request()
+    } catch (incoming: Throwable) {
+        throw transformer.transform(incoming)
     }
 }
