@@ -27,11 +27,10 @@ import com.dacruz.navigator.Screen
 import com.dacruz.theme.Grey100
 import com.dacruz.theme.Grey900
 import kotlinx.coroutines.delay
-import org.koin.compose.koinInject
+import org.koin.compose.rememberKoinInject
 
 @Composable
-fun AppNavigator() {
-    val navigationHandler: NavigationHandler = koinInject()
+fun AppNavigator(navigationHandler: NavigationHandler = rememberKoinInject()) {
     val currentScreen by navigationHandler.currentScreen.collectAsState()
 
     when (currentScreen) {
@@ -46,12 +45,12 @@ fun AppNavigator() {
 
 @Composable
 fun SplashScreen(navigationHandler: NavigationHandler) {
-     val alpha = remember { Animatable(1f) }
+    val alpha = remember { Animatable(1f) }
 
     LaunchedEffect(Unit) {
         delay(2000L)
         alpha.animateTo(0f, animationSpec = tween(durationMillis = 1000))
-        navigationHandler.navigateTo(Screen.HomeScreen)
+        navigationHandler.navigateTo(Screen.HomeScreen, pop = Screen.SplashScreen)
     }
     Box(
         modifier = Modifier.fillMaxSize(),

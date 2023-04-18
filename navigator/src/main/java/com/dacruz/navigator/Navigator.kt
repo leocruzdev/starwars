@@ -21,8 +21,11 @@ class Navigator : NavigationHandler {
         push(Screen.SplashScreen)
     }
 
-    override fun navigateTo(screen: Screen, extra: Any?) {
+    override fun navigateTo(screen: Screen, extra: Any?, pop: Screen?) {
         _transportData.value = extra
+        if (pop != null && screenHistory.peek() == pop) {
+            screenHistory.pop()
+        }
         screenHistory.push(screen)
         _currentScreen.value = screen
     }

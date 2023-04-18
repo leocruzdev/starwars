@@ -6,6 +6,6 @@ interface NavigationHandler {
     val currentScreen: StateFlow<Screen>
     val transportedData: StateFlow<Any?>
 
-    fun navigateTo(screen: Screen, extra: Any? = null)
+    fun navigateTo(screen: Screen, extra: Any? = null, pop: Screen? = null)
     fun navigateBack(onAppExit: () -> Unit = {})
 }

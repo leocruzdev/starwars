@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val isLightTheme = LocalIsLightTheme.current
             StarWarsTheme(isDarkTheme = isLightTheme.value) {
-                AppNavigator()
+                AppNavigator(navigationHandler)
             }
         }
     }

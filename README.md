@@ -12,6 +12,7 @@ O projeto Star Wars Challenge é um aplicativo Android desenvolvido para testar 
    <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_3_light.png"  width="300"/>
    <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_4_dark.png"  width="300"/>
    <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_4_light.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/01058c43d8901a8e8bfe87dca0bc00429a074520/app/src/main/res/drawable/img_5_dark.png"  width="300"/>
 
 ## Bibliotecas utilizadas
 
