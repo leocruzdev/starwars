@@ -7,12 +7,12 @@ class CategoryMapper {
 
     fun toView(domainCategory: DomainCategory): ViewCategory {
         val categories = listOf(
-            "Pessoas" to domainCategory.people,
-            "Planetas" to domainCategory.planets,
-            "Filmes" to domainCategory.films,
-            "Espécies" to domainCategory.species,
-            "Veículos" to domainCategory.vehicles,
-            "Naves" to domainCategory.starships
+            Triple("Personagens", domainCategory.people,  "https://starwars-visualguide.com/assets/img/categories/character.jpg"),
+            //Triple("Planetas", domainCategory.planets, "https://starwars-visualguide.com/assets/img/categories/planets.jpg")
+            //Triple("Filmes", domainCategory.films, "https://starwars-visualguide.com/assets/img/categories/films.jpg"),
+            //Triple("Espécies", domainCategory.species, "https://starwars-visualguide.com/assets/img/categories/species.jpg"),
+            //Triple("Veículos", domainCategory.vehicles, "https://starwars-visualguide.com/assets/img/categories/vehicles.jpg"),
+            //Triple("Naves", domainCategory.starships, "https://starwars-visualguide.com/assets/img/categories/starships.jpg")
         )
         return ViewCategory(categories)
     }
@@ -23,7 +23,7 @@ class CategoryMapper {
     fun toDomain(viewCategory: ViewCategory): DomainCategory {
         val categories = viewCategory.categories
         return DomainCategory(
-            people = categories.firstOrNull { it.first == "Pessoas" }?.second ?: "",
+            people = categories.firstOrNull { it.first == "Personagens" }?.second ?: "",
             planets = categories.firstOrNull { it.first == "Planetas" }?.second ?: "",
             films = categories.firstOrNull { it.first == "Filmes" }?.second ?: "",
             species = categories.firstOrNull { it.first == "Espécies" }?.second ?: "",

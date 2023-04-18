@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_title">Home</string>
+    <string name="favorite_list">Lista de Favoritos</string>
+    <string name="switch_theme_light">Switch to Light Theme</string>
+    <string name="switch_theme_dark">Switch to Dark Theme</string>
+    <string name="none_found">Nenhum item encontrado</string>
+    <string name="category_image_content_description">Imagem de %s</string>
+</resources>
