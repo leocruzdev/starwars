@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorite_characters_title">Personagens Favoritos</string>
+    <string name="favorite_characters_error_message">Ocorreu um erro ao carregar os personagens favoritos.</string>
+
+    <string name="favorite_detail_title">Detalhes do Personagem</string>
+    <string name="favorite_detail_remove_button">Remover dos favoritos</string>
+</resources>
