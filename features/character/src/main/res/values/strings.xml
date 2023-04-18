@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="character_screen_title">Personagens</string>
+    <string name="character_search_hint">Pesquisar personagens</string>
+    <string name="character_list_empty">Nenhum personagem encontrado.</string>
+    <string name="character_load_more">Carregar Mais</string>
+    <string name="character_detail_title">Detalhes do Personagem</string>
+    <string name="character_detail_favorite_button">Favoritar</string>
+
+    <string name="detail_screen_title">Detalhes do Personagem</string>
+    <string name="detail_favorite">Favoritar</string>
+    <string name="detail_favorite_button_content">Botão para favoritar</string>
+</resources>

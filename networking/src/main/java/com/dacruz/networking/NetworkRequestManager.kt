@@ -1,9 +1,16 @@
 package com.dacruz.networking
 
 import com.dacruz.networking.errors.ConnectionTimeoutTransformer
+import com.dacruz.networking.errors.HttpNotFoundTransformer
+import com.dacruz.networking.errors.MultiExceptionTransformer
 
 
-val transformer: ExceptionTransformer = ConnectionTimeoutTransformer()
+val transformer = MultiExceptionTransformer(
+    listOf(
+        ConnectionTimeoutTransformer(),
+        HttpNotFoundTransformer()
+    )
+)
 
 suspend fun <T> executeRequest(
     request: suspend () -> T
