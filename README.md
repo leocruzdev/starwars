@@ -8,7 +8,7 @@ O projeto Star Wars Challenge é um aplicativo Android desenvolvido para testar 
 - Pesquisa de personagens pela barra de pesquisa (Character)
 - Paginação com a Paging Library
 - Salvamento de personagens favoritos (Favorite)
-- Tema escuro e claro
+- 🌓 **Modo escuro e claro (Dark e Light Mode)**: suporte para temas escuro e claro, proporcionando uma melhor experiência de uso
 - Arquitetura em camadas com abstração de banco de dados usando Room
 - Navegação personalizada com módulo de navigation
 - Integração com a API Star Wars (SWAPI) através do módulo de networking e Retrofit
