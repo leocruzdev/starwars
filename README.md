@@ -13,6 +13,33 @@ O projeto Star Wars Challenge é um aplicativo Android desenvolvido para testar 
    <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_4_dark.png"  width="300"/>
    <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_4_light.png"  width="300"/>
 
+## Bibliotecas utilizadas
+
+- Activity Compose
+- Compose Animation
+- Compose Foundation
+- Compose Material
+- Compose Runtime
+- Compose UI
+- Pagging 3
+- Room
+- Koin Android
+- Koin AndroidX Compose
+- Koin Core JVM
+- Koin Test JVM
+- Coil
+- Coil Compose
+- Moshi
+- Moshi Kotlin
+- OkHttp3
+- Logging Interceptor
+- MockWebServer
+- Okio JVM
+- Retrofit
+- Converter Moshi
+- Turbine JVM
+- MockK JVM
+
 ## Recursos
 
 - Lista de personagens com informações detalhadas (Home)
@@ -39,8 +66,9 @@ Além disso, o projeto é dividido em vários módulos, como:
 - `navigation`: módulo responsável pela navegação personalizada
 - `networking`: módulo que provê o builder do Retrofit com tratamento de erros
 - `theme`: módulo que centraliza as configurações de cores, estilos e temas
+- `features`: módulo que abriga as funcionalidades específicas de cada feature do projeto
 
-A aplicação utiliza a abordagem de local e remote data sources, juntamente com repositories, use cases e view models. Para as chamadas de rede e IO, o projeto emprega o uso de Flows.
+A aplicação utiliza a abordagem de local e remote data sources, juntamente com repositories, use cases, view models e mappers para transformar data para domain e domain para presentation. Para as chamadas de rede e IO, o projeto emprega o uso de Flows.
 
 ## Próximos Passos e Melhorias
 
@@ -62,14 +90,6 @@ Para instalar e executar o aplicativo no Android Studio, siga estas etapas:
 
 1. Faça o clone do repositório ou baixe os arquivos zip do projeto.
 2. Abra o Android Studio e clique em "Open an existing Android Studio project" (Abrir um projeto Android Studio existente).
-
-
-## Instalação
-
-Para instalar e executar o aplicativo no Android Studio, siga estas etapas:
-
-1. Faça o clone do repositório ou baixe os arquivos zip do projeto.
-2. Abra o Android Studio e clique em "Open an existing Android Studio project" (Abrir um projeto Android Studio existente).
 3. Navegue até a pasta do projeto e selecione a pasta raiz do projeto Star Wars Challenge.
 4. Aguarde o Android Studio sincronizar e construir o projeto.
 5. Execute o aplicativo em um emulador ou dispositivo Android conectado.
@@ -78,6 +98,6 @@ Para instalar e executar o aplicativo no Android Studio, siga estas etapas:
 
 Se você tiver dúvidas ou sugestões, entre em contato comigo:
 
-- Nome: [Leonardo Oliveira da Cruz]
+- Nome: Leonardo Oliveira da Cruz
 - E-mail: [leonardo_cruz09@hotmail.com]
 - LinkedIn: [https://www.linkedin.com/in/leonardo-oliveira-da-cruz-8566a530/]
