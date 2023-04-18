@@ -2,6 +2,17 @@
 
 O projeto Star Wars Challenge é um aplicativo Android desenvolvido para testar o conhecimento dos fãs da franquia Star Wars. O aplicativo foi criado utilizando o pacote `com.dacruz.starwarschallenge` e oferece quizzes, fatos interessantes e informações detalhadas sobre os personagens do universo Star Wars. O projeto segue os conceitos de Clean Architecture e está organizado em camadas e módulos específicos.
 
+
+## Screens:
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_1_dark.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_1_light.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_2_dark.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_2_light.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_3_dark.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_3_light.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_4_dark.png"  width="300"/>
+   <img src="https://github.com/leocruzdev/StarWarsChallenge/blob/8ca13485431e50b63ea36e518cdade616372a0f1/app/src/main/res/drawable/img_4_light.png"  width="300"/>
+
 ## Recursos
 
 - Lista de personagens com informações detalhadas (Home)
