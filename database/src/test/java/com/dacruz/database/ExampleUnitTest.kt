@@ -1,4 +1,4 @@
-package com.dacruz.character
+package com.dacruz.database
 
 import org.junit.Test
 
