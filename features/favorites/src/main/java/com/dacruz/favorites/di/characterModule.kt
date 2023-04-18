@@ -1,8 +1,5 @@
 package com.dacruz.favorites.di
 
-import androidx.paging.PagingSource
-import com.dacruz.database.AppDatabase
-import com.dacruz.database.model.FavoriteCharacterEntity
 import com.dacruz.favorites.data.FavoriteRepositoryImpl
 import com.dacruz.favorites.data.local.CharacterPagingSource
 import com.dacruz.favorites.data.local.LocalDataSource
@@ -19,8 +16,6 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val favoriteModule = module {
-
-    single { get<AppDatabase>().favoriteCharacterDao() }
     single<FavoriteRepository> { FavoriteRepositoryImpl(localDataSource = get()) }
 
     single<LocalDataSource> { LocalDataSourceImpl(favoriteCharacterDao = get(), mapper = get()) }
