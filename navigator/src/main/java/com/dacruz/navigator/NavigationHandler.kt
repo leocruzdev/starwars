@@ -4,6 +4,8 @@ import kotlinx.coroutines.flow.StateFlow
 
 interface NavigationHandler {
     val currentScreen: StateFlow<Screen>
-    fun navigateTo(screen: Screen)
+    val transportedData: StateFlow<Any?>
+
+    fun navigateTo(screen: Screen, extra: Any? = null)
     fun navigateBack(onAppExit: () -> Unit = {})
 }
