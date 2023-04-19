@@ -25,9 +25,6 @@ internal class CharactersViewModel(
         MutableStateFlow<CharacterState>(CharacterState.Loading)
     val filteredCharacterStateFlow: StateFlow<CharacterState> = _filteredCharacterStateFlow
 
-    private val _isLoadingMore = MutableStateFlow(false)
-    val isLoadingMore: StateFlow<Boolean> = _isLoadingMore
-
     val searchQueryFlow = MutableStateFlow("")
 
     init {
@@ -62,9 +59,8 @@ internal class CharactersViewModel(
     }
 
     fun loadMoreCharacters() {
-        if (searchQueryFlow.value.isEmpty() && !_isLoadingMore.value) {
+        if (searchQueryFlow.value.isEmpty()) {
             currentPage += 1
-            if (currentPage <= 10) _isLoadingMore.value = true
             viewModelScope.launch {
                 getCharactersUseCase(currentPage)
                     .map { domainCharacters -> characterViewMapper.toView(domainCharacters) }
@@ -80,7 +76,6 @@ internal class CharactersViewModel(
                                 _characterStateFlow.value = newState
                             }
                         }
-                        _isLoadingMore.value = false
                     }
             }
         }

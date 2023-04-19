@@ -16,12 +16,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,7 +34,6 @@ import com.dacruz.theme.components.DefaultSearchField
 import com.dacruz.theme.components.DefaultToolbar
 import com.dacruz.theme.components.LoadingButton
 import com.dacruz.theme.components.withErrorHandling
-import kotlinx.coroutines.launch
 import org.koin.androidx.compose.getViewModel
 
 @Composable
@@ -45,7 +42,6 @@ fun CharacterScreen(navigationHandler: NavigationHandler) {
 
     val characterState by charactersViewModel.characterStateFlow.collectAsState()
     val filteredCharacterState by charactersViewModel.filteredCharacterStateFlow.collectAsState()
-    val isLoadingMore by charactersViewModel.isLoadingMore.collectAsState()
 
     var searchQuery by remember { mutableStateOf("") }
 
@@ -79,7 +75,6 @@ fun CharacterScreen(navigationHandler: NavigationHandler) {
                 },
                 loadMore = { charactersViewModel.loadMoreCharacters() },
                 navigationHandler = navigationHandler,
-                isLoadingMore = isLoadingMore
             )
         }
     }
@@ -92,7 +87,6 @@ private fun CharacterScreenContent(
     loadMore: () -> Unit,
     navigationHandler: NavigationHandler,
     showLoadMoreButton: Boolean = false,
-    isLoadingMore: Boolean
 ) {
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -110,7 +104,6 @@ private fun CharacterScreenContent(
                     loadMore = loadMore,
                     navigationHandler = navigationHandler,
                     showLoadMoreButton = showLoadMoreButton,
-                    isLoadingMore = isLoadingMore
                 )
             }
             is CharacterState.Error -> {
@@ -133,11 +126,8 @@ private fun CharacterList(
     loadMore: () -> Unit,
     navigationHandler: NavigationHandler,
     showLoadMoreButton: Boolean,
-    isLoadingMore: Boolean
 ) {
     val listState = rememberLazyListState()
-    val coroutineScope = rememberCoroutineScope()
-    var lastVisibleIndex by remember { mutableStateOf(0) }
 
     Column(modifier = Modifier.fillMaxSize()) {
         LazyColumn(
@@ -147,29 +137,18 @@ private fun CharacterList(
             items(characters) { character ->
                 CharacterListItem(character, navigationHandler)
             }
+
             if (showLoadMoreButton) {
                 item {
                     LoadingButton(
                         onClick = {
-                            lastVisibleIndex =
-                                listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
                             loadMore()
                         },
                         text = stringResource(R.string.character_load_more),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(64.dp)
                     )
-                }
-            }
-        }
-    }
-
-    LaunchedEffect(listState.isScrollInProgress) {
-        when {
-            !listState.isScrollInProgress -> {
-                lastVisibleIndex = listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
-            }
-            isLoadingMore -> {
-                coroutineScope.launch {
-                    listState.animateScrollToItem(lastVisibleIndex)
                 }
             }
         }
