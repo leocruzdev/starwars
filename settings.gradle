@@ -1,16 +1,26 @@
 pluginManagement {
     repositories {
+        mavenCentral()
         gradlePluginPortal()
         google()
-        mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    //repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
         mavenCentral()
+        gradlePluginPortal()
+        google()
     }
 }
+
 rootProject.name = "Star Wars Challenge"
 include ':app'
+include ':networking'
+include ':theme'
+include ':features:home'
+include ':navigator'
+include ':features:character'
+include ':database'
+include ':features:favorites'
