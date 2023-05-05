@@ -1,0 +1,54 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "com.android.tools.build"
+  - package-ecosystem: "gradle"
+    directory: "/app"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/database"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/navigator"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/theme"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/features/character"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/features/favorites"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/features/home"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "gradle"
+    directory: "/networking"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
