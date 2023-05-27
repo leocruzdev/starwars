@@ -1,6 +1,6 @@
-# Star Wars Challenge
+# Star Wars
 
-O projeto Star Wars Challenge é um aplicativo Android desenvolvido para testar o conhecimento dos fãs da franquia Star Wars. O aplicativo foi criado e oferece quizzes, fatos interessantes e informações detalhadas sobre os personagens do universo Star Wars. O projeto segue os conceitos de Clean Architecture e está organizado em camadas e módulos específicos.
+O projeto Star Wars é um aplicativo Android desenvolvido para testar o conhecimento dos fãs da franquia Star Wars. O aplicativo foi criado e oferece quizzes, fatos interessantes e informações detalhadas sobre os personagens do universo Star Wars. O projeto segue os conceitos de Clean Architecture e está organizado em camadas e módulos específicos.
 
 
 ## Screens:
